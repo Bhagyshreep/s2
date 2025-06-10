@@ -16,6 +16,7 @@
     </dependency>
   </dependencies>
   <build>
+  <pluginManegement>
   <plugins>
   <plugin>
   <groupId>org.apache.maven.plugins</groupId>
@@ -26,6 +27,20 @@
   <useSystemOut>true</useSystemOut>
   </configuration>
   </plugin>
+  <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-jar-plugin</artifactId>
+  <vrsion>3.2.2</version>
+  <configuration>
+  <archive>
+  <manifest>
+  <addClasspath>true</addClasspath>
+  <mainClass>com.example.App</mainClass>
+  </manifest>
+  </archive>
+  </configuration>
+  </plugin>
   </plugins>
+  </pluginManegement>
   </build>
 </project>
